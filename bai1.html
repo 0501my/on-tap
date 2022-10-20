@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--bai 1.1 va 1.2-->
+<!--Nhập:-->
+<!--<input type="text" id = "C" placeholder="nhập vào đây" oninput="caculate()" onchange="caculate()"/>-->
+<!--<p id ="show"></p>-->
+
+<script>
+
+    // function caculate(){
+    //     let a = document.getElementById("C").value
+    //     let b = a*4
+    //     let S = a*a
+    //     document.getElementById("show").innerHTML = "chu vi hình vuông là : " + b +"<br>" + "Diện tích hình vuông là :" + S
+    // }
+
+
+    // Bai 1.3
+
+    // let a = +prompt("nhập a")
+    // let b = +prompt("nhập b")
+    //     let c = a**2;
+    // let d = a**b;
+    // document.write("bình phương a = " + c + "<br>" + "bình phương ab = " + d)
+
+    // Bai 1.4
+    // let sum = 0;
+    // let a = +prompt("nhập a")
+    // let b = +prompt("nhập b")
+    // for (let i = a; i <= b; i++) {
+    //     sum += i
+    // }
+    // for (let i = b; i <= a; i++) {
+    //     sum += i
+    // }
+    // document.write("tổng là : " + sum)
+
+    // Bai 1.5
+    // let a = +prompt("nhập năm")
+    // let tk = Math.ceil(a/100);
+    // document.write('năm : ' +  a + "  là thế kỷ  " +  tk)
+
+    // bài 1.6
+    // let a = +prompt("nhập a")
+    // let b = +prompt("nhập b")
+    // let c = +prompt("nhập c")
+    // if (a+b>c && b+c>a && a+c>b){
+    //     document.write("đây là tam giác")
+    // }else {
+    //     document.write("đây không phải tam giác")
+    // }
+    //tam giác cân
+    // let a = +prompt("nhập a")
+    // let b = +prompt("nhập b")
+    // let c = +prompt("nhập c")
+    // if (a+b>c && b+c>a && a+c>b){
+    //     if (a=b||a==c||b==c){
+    //         document.write("Đây là tam giác cân")
+    //     }else {
+    //         document.write("đây không phải tam giác cân")
+    //     }
+    // }else {
+    //     document.write("Đây không phải tam giác")
+    // }
+
+    //tam giác đều
+    // let a = +prompt("nhập a")
+    // let b = +prompt("nhập b")
+    // let c = +prompt("nhập c")
+    // if (a + b > c && b + c > a && a + c > b) {
+    //     if (a == b && b == c) {
+    //         document.write("đây là tam giác đều")
+    //     } else {
+    //         document.write("đây không phải tam giác đều")
+    //     }
+    // } else {
+    //     document.write("đây không phải tam giác")
+    // }
+
+    //tam giác vuông
+
+
+    let a = +prompt("nhập a")
+    let b = +prompt("nhập b")
+    let c = +prompt("nhập c")
+    if (a + b > c && b + c > a && a + c > b) {
+        if(a**2==(b**2 + c**2) || b**2 == (a**2 + c**2)|| c**2 == (b**2 + a**2)){
+            document.write("đây là tam giác vuông")
+        }else {
+            document.write("đây không phải tam giác vuông")
+        }
+    }else {
+        document.write("đây không phải tam giác")
+    }
+</script>
+
+</body>
+</html>

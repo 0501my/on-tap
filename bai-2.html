@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bai 1" onclick="bai1()">Nhập n là số phần tử của mảng:<br>
+<input type="button" value="Bai 2" onclick="bai2()">Nhập vào n phần tử<br>
+<input type="button" value="Bai 3" onclick="bai3()">In các phần tử<br>
+<input type="button" value="Bai 4" onclick="bai4()">Tính tổng của các phần tử<br>
+<input type="button" value="Bai 5" onclick="bai5()">Tính tổng các phần tử chia 5 dư 2<br>
+<input type="button" value="Bai 6" onclick="bai6()">Đếm số phần tử chia hết cho 6<br>
+<input type="button" value="Bai 7" onclick="bai7()">Tính TBC các phần tử > 10 và chia 4 dư 3<br>
+<input type="button" value="Bai 8" onclick="bai8()">Tìm max của mảng<br>
+<input type="button" value="Bai 9" onclick="bai9()">Tìm max của các số lẻ trong mảng<br>
+<input type="button" value="Bai 10" onclick="bai10()">Tìm vị trí của x(nhập vào bằng prompt trong mảng)<br>
+
+<script>
+  function bai1() {
+    const mang = []
+    n = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    mang.push(n)
+    document.write(mang)
+  }
+
+  function bai4() {
+    let total = 0;
+    mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for (let i = 0; i < mang.length; i++) {
+      total += mang[i]
+    }
+    document.write("tổng các phần tử trong mảng là : " + total)
+  }
+
+  function bai5() {
+    let total = 0;
+    mang = []
+    for (let i = 0; i < 10; i++) {
+      mang[i] = Number(prompt("nhap so"))
+    }
+    document.write(" mảng số là : " + mang + "<br>")
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] % 5 == 2) {
+        total += mang[i]
+      }
+    }
+    document.write('tong các số đó là :' + total)
+  }
+
+  function bai6() {
+    let dem = 0
+    mang = []
+    for (let i = 0; i < 10; i++) {
+      mang[i] = Number(prompt("nhap so"))
+    }
+    document.write("mảng số là: " + mang + "<br>")
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] % 6 == 0) {
+        dem++
+      }
+    }
+    document.write("có :  " + dem + '  số chia hết cho 6 trong mảng')
+  }
+
+  function bai7() {
+    dem = 0
+    let tbc = 0
+    let total = 0
+    mang = []
+    for (let i = 0; i < 10; i++) {
+      mang[i] = Number(prompt("nhap so"))
+    }
+    document.write("mảng số là: " + mang + "<br>")
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] > 10 && mang[i] % 4 == 3) {
+        total += mang[i]
+        dem++
+      }
+      tbc = total / dem
+    }
+    document.write("có : " + dem + " số thỏa mãn và  trung bình cộng các số đó = " + tbc)
+  }
+
+  function bai8() {
+    let max = 0
+    let vitri = 0
+    mang = []
+    for (let i = 0; i < 10; i++) {
+      mang[i] = Number(prompt("nhap so"))
+    }
+    document.write("mảng số là: " + mang + "<br>")
+    for (let i = 0; i < mang.length; i++) {
+      if (max < mang[i]) {
+        max = mang[i]
+        vitri = i
+      }
+    }
+    document.write("Phần tử lớn nhất trong mảng là : " + max + " tại vị trí = " + vitri)
+  }
+
+  function bai9() {
+    let max = 0
+    mang = []
+    for (let i = 0; i < 10; i++) {
+      mang[i] = Number(prompt("nhap so"))
+    }
+    document.write("mảng số là: " + mang + "<br>")
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] % 2 != 0 && mang[i] > max) {
+        max = mang[i]
+      }
+    }
+    document.write("Phần tử lẻ lớn nhất trong mảng là : " + max)
+  }
+
+  function bai10() {
+    let vitri = 0
+    let mang = []
+    for (let i = 0; i < 3; i++) {
+      mang[i] = prompt("nhập")
+    }
+    let x = prompt("")
+    let flag = false;
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] == x) {
+        flag = true;
+        vitri= i
+        document.write(x + " là phần tử trong mảng"  + "  vị trí là : " + vitri);
+      }
+    }
+    if (flag == false) {
+      document.write(x + " Không là phần tử trong mảng")
+    }
+  }
+</script>
+</body>
+</html>
